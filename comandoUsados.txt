@@ -1,0 +1,45 @@
+PS C:\Users\jessi\Desktop\imersao-django> python -m venv venv
+PS C:\Users\jessi\Desktop\imersao-django> ve
+                                          venv/Scripts/activate
+(venv) PS C:\Users\jessi\Desktop\imersao-django> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\jessi\desktop\imersao-django\venv\lib\site-packages (25.2)
+(venv) PS C:\Users\jessi\Desktop\imersao-django> pip install django
+Collecting django
+  Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref>=3.8.1 (from django)
+  Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 15.0 MB/s  0:00:00
+Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)      
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.10.0 django-5.2.7 sqlparse-0.5.3 tzdata-2025.2
+(venv) PS C:\Users\jessi\Desktop\imersao-django> django-admin --version
+5.2.7
+(venv) PS C:\Users\jessi\Desktop\imersao-django> pip freeze > requirements.txt 
+(venv) PS C:\Users\jessi\Desktop\imersao-django> django-admin startproject app
+(venv) PS C:\Users\jessi\Desktop\imersao-django> django-admin startproject app .
+(venv) PS C:\Users\jessi\Desktop\imersao-django> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+October 18, 2025 - 17:38:50
+Django version 5.2.7, using settings 'app.settings'
+Starting development server at http://127.0.0.1:8000/        
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[18/Oct/2025 17:39:21] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[18/Oct/2025 17:39:22] "GET /favicon.ico HTTP/1.1" 404 2205
+(venv) PS C:\Users\jessi\Desktop\imersao-django>
