@@ -43,3 +43,110 @@ For more information on production servers see: https://docs.djangoproject.com/e
 Not Found: /favicon.ico
 [18/Oct/2025 17:39:22] "GET /favicon.ico HTTP/1.1" 404 2205
 (venv) PS C:\Users\jessi\Desktop\imersao-django>
+
+
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$ python -m venv venv
+
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$ 
+
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$ 
+
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$ source venv/Scripts/activate
+(venv) 
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$ pip install -r requirements.txt
+Collecting asgiref==3.10.0 (from -r requirements.txt (line 1))
+  Using cached asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting Django==5.2.7 (from -r requirements.txt (line 2))
+  Using cached django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+Collecting sqlparse==0.5.3 (from -r requirements.txt (line 3))
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata==2025.2 (from -r requirements.txt (line 4))
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting Pillow>=10.0 (from -r requirements.txt (line 5))
+  Downloading pillow-12.0.0-cp313-cp313-win_amd64.whl.metadata (9.0 kB)
+Collecting gunicorn>=22.0 (from -r requirements.txt (line 6))
+  Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting whitenoise>=6.6.0 (from -r requirements.txt (line 7))
+  Downloading whitenoise-6.11.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting packaging (from gunicorn>=22.0->-r requirements.txt (line 6))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Using cached asgiref-3.10.0-py3-none-any.whl (24 kB)
+Using cached django-5.2.7-py3-none-any.whl (8.3 MB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading pillow-12.0.0-cp313-cp313-win_amd64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 6.5 MB/s  0:00:01
+Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+Downloading whitenoise-6.11.0-py3-none-any.whl (20 kB)
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Installing collected packages: whitenoise, tzdata, sqlparse, Pillow, packaging, asgiref, gunicorn, Django
+Successfully installed Django-5.2.7 Pillow-12.0.0 asgiref-3.10.0 gunicorn-23.0.0 packaging-25.0 sqlparse-0.5.3 tzdata-2025.2 whitenoise-6.11.0
+
+[notice] A new release of pip is available: 25.2 -> 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(venv) 
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$
+(venv) 
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$
+(venv) 
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$ python manage.py runserver
+Traceback (most recent call last):
+  File "C:\Users\jessi\imersao-Django\imersao-Django\manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\jessi\imersao-Django\imersao-Django\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jessi\imersao-Django\imersao-Django\venv\Lib\site-packages\django\core\management\__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\jessi\imersao-Django\imersao-Django\venv\Lib\site-packages\django\core\management\__init__.py", line 382, in execute
+    settings.INSTALLED_APPS
+  File "C:\Users\jessi\imersao-Django\imersao-Django\venv\Lib\site-packages\django\conf\__init__.py", line 81, in __getattr__
+    self._setup(name)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\jessi\imersao-Django\imersao-Django\venv\Lib\site-packages\django\conf\__init__.py", line 68, in _setup
+    self._wrapped = Settings(settings_module)
+                    ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jessi\imersao-Django\imersao-Django\venv\Lib\site-packages\django\conf\__init__.py", line 166, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1161, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1091, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\jessi\imersao-Django\imersao-Django\app\settings.py", line 110
+    'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',_
+                                                                              ^
+SyntaxError: ':' expected after dictionary key
+(venv) 
+jessi@Jessica_note MINGW64 ~/imersao-Django/imersao-Django (main)
+$ AUTH_PASSWORD_VALIDATORS = [
+  python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+November 23, 2025 - 16:33:57
+Django version 5.2.7, using settings 'app.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
